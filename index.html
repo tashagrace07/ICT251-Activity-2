@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Natasha Grace Mulenga - Student Website</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>Welcome to My Student Website</h1>
+        <p>Natasha Grace Mulenga - Computer Science Student</p>
+    </header>
+
+
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#hobbies">My Hobbies</a>
+        <a href="#learning">My Learning Plan</a>
+        <a href="#photos">My Photos</a>
+        <a href="#media">My Media</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <!-- ABOUT ME -->
+        <section id="about" class="content-section">
+
+            <h2>About Me</h2>
+
+            <p>
+                I am a Computer Science student who is interested in
+                technology and learning how computers and software work.
+                I am currently developing my programming and web development
+                skills. I enjoy learning new things and improving my abilities
+                through practical activities. My goal is to become more
+                confident in technology and use my skills to create useful
+                applications and solutions.
+            </p>
+
+        </section>
+
+
+        <!-- HOBBIES -->
+        <section id="hobbies" class="content-section">
+
+            <h2>My Hobbies</h2>
+
+            <ul>
+                <li>Watching Movies</li>
+                <li>Creativity</li>
+                <li>Playing Games</li>
+            </ul>
+
+        </section>
+
+
+        <!-- LEARNING PLAN -->
+        <section id="learning" class="content-section">
+
+            <h2>My Learning Plan</h2>
+
+            <p>
+                My plan is to improve my web development skills through
+                regular practice and small projects.
+            </p>
+
+            <ol>
+                <li>Practise HTML and CSS regularly.</li>
+                <li>Build small websites to improve my skills.</li>
+                <li>Learn how to make websites responsive on different devices.</li>
+            </ol>
+
+
+            <!-- LEARNING PLAN TABLE -->
+
+            <table>
+
+                <caption>My Web Development Learning Plan</caption>
+
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Topic</th>
+                        <th>Practice Task</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Monday</td>
+                        <td>HTML</td>
+                        <td>Create and structure a webpage.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>CSS</td>
+                        <td>Style a webpage using CSS.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Friday</td>
+                        <td>Responsive Design</td>
+                        <td>Practise making a webpage work on different screen sizes.</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+
+            <p>
+                A useful website for learning web development is
+                <a href="https://developer.mozilla.org/en-US/docs/Learn"
+                   target="_blank">
+                    MDN Web Docs
+                </a>.
+            </p>
+
+        </section>
+
+
+        <!-- PHOTOS -->
+        <section id="photos" class="content-section">
+
+            <h2>My Photos</h2>
+
+            <div class="gallery">
+
+                <figure>
+                    <img src="images/photo1.jpg"
+                         alt="A laptop displaying Python Turtle programming code">
+
+                    <figcaption>
+                        Practising Python programming with Turtle graphics.
+                    </figcaption>
+                </figure>
+
+
+                <figure>
+                    <img src="images/photo2.jpg"
+                         alt="A student wearing a lab coat">
+
+                    <figcaption>
+                        Taking part in practical learning activities.
+                    </figcaption>
+                </figure>
+
+
+                <figure>
+                    <img src="images/photo3.jpg"
+                         alt="A view of Mulungushi University">
+
+                    <figcaption>
+                        At Mulungushi University.
+                    </figcaption>
+                </figure>
+
+
+                <figure>
+                    <img src="images/photo4.jpg"
+                         alt="A student studying outdoors with a laptop">
+
+                    <figcaption>
+                        Studying and practising my computer skills.
+                    </figcaption>
+                </figure>
+
+            </div>
+
+        </section>
+
+
+        <!-- MEDIA -->
+        <section id="media" class="content-section">
+
+            <h2>My Media</h2>
+
+
+            <h3>My Introduction Video</h3>
+
+            <video controls>
+                <source src="videos/intro.mp4" type="video/mp4">
+
+                Your browser does not support the video element.
+            </video>
+
+            <p>
+                This short video introduces me, my programme and one
+                web development skill that I am learning.
+            </p>
+
+
+            <h3>My Audio Clip</h3>
+
+            <audio controls>
+                <source src="videos/voice.m4a" type="audio/mp4">
+
+                Your browser does not support the audio element.
+            </audio>
+
+            <p>
+                This audio clip explains one of my hobbies and why
+                I enjoy it.
+            </p>
+
+        </section>
+
+
+        <!-- CONTACT FORM -->
+        <section id="contact" class="content-section">
+
+            <h2>Contact Me</h2>
+
+            <form action="#" method="post">
+
+                <!-- NAME -->
+                <label for="name">Name:</label>
+
+                <input type="text"
+                       id="name"
+                       name="name"
+                       required>
+
+
+                <!-- EMAIL -->
+                <label for="email">Email:</label>
+
+                <input type="email"
+                       id="email"
+                       name="email"
+                       required>
+
+
+                <!-- TOPIC -->
+                <label for="topic">Topic:</label>
+
+                <select id="topic" name="topic">
+
+                    <option value="web-development">
+                        Web Development
+                    </option>
+
+                    <option value="programming">
+                        Programming
+                    </option>
+
+                    <option value="general">
+                        General
+                    </option>
+
+                </select>
+
+
+                <!-- MESSAGE -->
+                <label for="message">Message:</label>
+
+                <textarea id="message"
+                          name="message"
+                          rows="6"
+                          required>
+                </textarea>
+
+
+                <!-- SUBMIT -->
+                <button type="submit">
+                    Send Message
+                </button>
+
+            </form>
+
+            <p>
+                Note: This form is for demonstration purposes only.
+                It does not send or store any information.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            &copy; 2026 Grace Mulenga. All rights reserved.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
