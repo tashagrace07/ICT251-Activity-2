@@ -17,6 +17,40 @@ header {
     text-align: center;
     padding: 30px 20px;
 }
+}
+
+/* PROJECTS */
+
+.project-card {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.project-summary {
+    color: #555;
+}
+
+.expand-btn {
+    background-color: #1B2A4A;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.expand-btn:hover,
+.expand-btn:focus {
+    background-color: #2E8B77;
+}
+
+.project-details {
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px dashed #ccc;
+}
 
 
 /* NAVIGATION */
@@ -225,4 +259,92 @@ footer {
         max-width: 300px;
     }
 
+}
+/* ============================================================
+   FINAL CONTRAST FIX — force readable text in BOTH themes
+   ============================================================ */
+
+/* LIGHT MODE defaults */
+body {
+  background-color: #f4f6fb !important;
+  color: #1f2230 !important;
+}
+
+h1, h2, h3 { color: #1f2230 !important; }
+
+p, li, ul, ol, td, th, label, figcaption {
+  color: #1f2230 !important;
+}
+
+nav a { color: #1f2230 !important; }
+
+/* DARK MODE overrides — must win */
+body.dark-theme {
+  background-color: #1f2230 !important;
+  color: #e2e5f0 !important;
+}
+
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3 { color: #e2e5f0 !important; }
+
+body.dark-theme p,
+body.dark-theme li,
+body.dark-theme ul,
+body.dark-theme ol,
+body.dark-theme td,
+body.dark-theme th,
+body.dark-theme label,
+body.dark-theme figcaption { color: #e2e5f0 !important; }
+
+body.dark-theme nav a { color: #c8d0e7 !important; }
+
+body.dark-theme section {
+  background-color: #272b3d !important;
+}
+
+/* Keep photos sensible size */
+.gallery-viewer img,
+#photos figure img {
+  max-width: 480px !important;
+  width: 100% !important;
+  height: auto !important;
+  display: block !important;
+  margin: 0 auto !important;
+}
+/* ============================================================
+   FIX: make "View My Projects" button visible again
+   ============================================================ */
+
+header .btn-primary,
+header .btn-primary:visited {
+  background-color: #6d7fae !important;
+  color: #ffffff !important;
+  padding: 0.65rem 1.3rem !important;
+  border-radius: 7px !important;
+  text-decoration: none !important;
+  font-weight: 600 !important;
+  display: inline-block !important;
+  border: 2px solid #ffffff !important;
+  margin: 0.5rem !important;
+}
+
+header .btn-primary:hover,
+header .btn-primary:focus {
+  background-color: #566a99 !important;
+  color: #ffffff !important;
+}
+
+/* Dark mode version */
+body.dark-theme header .btn-primary,
+body.dark-theme header .btn-primary:visited {
+  background-color: #8092c1 !important;
+  color: #ffffff !important;
+  border-color: #c8d0e7 !important;
+}
+
+body.dark-theme header .btn-primary:hover,
+body.dark-theme header .btn-primary:focus {
+  background-color: #a0aed4 !important;
+  color: #ffffff !important;
 }

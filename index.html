@@ -16,8 +16,14 @@
 
     <!-- HEADER -->
     <header>
-        <h1>Welcome to My Student Website</h1>
-        <p>Natasha Grace Mulenga - Computer Science Student</p>
+        <h1>Hello, I'm Natasha Grace Mulenga</h1>
+        <p class="hero-subtitle">BSc Computer Science student at Mulungushi University</p>
+        <p class="hero-intro">
+            I'm building my web development skills one project at a time —
+            from semantic HTML to JavaScript-powered interactivity.
+        </p>
+        <a href="#projects" class="btn-primary">View My Projects</a>
+        <button type="button" id="themeToggle" aria-label="Toggle dark mode">Dark Mode</button>
     </header>
 
 
@@ -26,6 +32,7 @@
         <a href="#about">About Me</a>
         <a href="#hobbies">My Hobbies</a>
         <a href="#learning">My Learning Plan</a>
+        <a href="#projects">projects</a>
         <a href="#photos">My Photos</a>
         <a href="#media">My Media</a>
         <a href="#contact">Contact</a>
@@ -132,25 +139,77 @@
             </p>
 
         </section>
+        <!-- PROJECTS -->
+        <section id="projects" class="content-section">
+
+            <h2>Projects &amp; Skills</h2>
+            <p>A few things I've learned and built so far in this course:</p>
+
+            <article class="project-card">
+                <h3>Semantic HTML Student Page</h3>
+                <p class="project-summary">
+                    Rebuilt my first one-page HTML file into a properly structured
+                    site using header, nav, main, section and footer elements.
+                </p>
+                <button class="expand-btn" aria-expanded="false">Show details</button>
+                <div class="project-details" hidden>
+                    <p>
+                        I learned the difference between purely visual markup and
+                        semantic markup, why heading levels matter, and how to link
+                        navigation to section ids.
+                    </p>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <h3>Responsive CSS Layout</h3>
+                <p class="project-summary">
+                    Styled this site with external CSS, including a photo gallery
+                    and a media query for narrow screens.
+                </p>
+                <button class="expand-btn" aria-expanded="false">Show details</button>
+                <div class="project-details" hidden>
+                    <p>
+                        I practiced the CSS box model (padding, margin, border),
+                        class vs id vs element selectors, and writing a media query
+                        so the layout works on a phone-sized screen.
+                    </p>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <h3>Interactive JavaScript Features</h3>
+                <p class="project-summary">
+                    Added JavaScript: form validation, a gallery viewer, and
+                    expandable project details like the one you're reading now.
+                </p>
+                <button class="expand-btn" aria-expanded="false">Show details</button>
+                <div class="project-details" hidden>
+                    <p>
+                        I learned how to listen for DOM events, update the page
+                        without reloading using <code>event.preventDefault()</code>,
+                        and validate user input with JavaScript.
+                    </p>
+                </div>
+            </article>
+
+        </section>
 
 
         <!-- PHOTOS -->
         <section id="photos" class="content-section">
-
             <h2>My Photos</h2>
 
-            <div class="gallery">
+            <div class="gallery-viewer">
+  <img id="galleryImage" src="images/photo1.jpg" alt="A laptop displaying Python Turtle programming code">
+  <p id="galleryCaption">Practising Python programming with Turtle graphics.</p>
 
-                <figure>
-                    <img src="images/photo1.jpg"
-                         alt="A laptop displaying Python Turtle programming code">
-
-                    <figcaption>
-                        Practising Python programming with Turtle graphics.
-                    </figcaption>
-                </figure>
-
-
+  <div class="gallery-controls">
+    <button type="button" id="prevPhoto">Previous</button>
+    <span id="galleryStatus">Photo 1 of 4</span>
+    <button type="button" id="nextPhoto">Next</button>
+  </div>
+</div>
                 <figure>
                     <img src="images/photo2.jpg"
                          alt="A student wearing a lab coat">
@@ -221,87 +280,69 @@
         </section>
 
 
-        <!-- CONTACT FORM -->
-        <section id="contact" class="content-section">
+       <!-- CONTACT FORM -->
+<section id="contact" class="content-section">
 
-            <h2>Contact Me</h2>
+    <h2>Contact Me</h2>
 
-            <form action="#" method="post">
+    <form id="contact-form" action="#" method="post" novalidate>
 
-                <!-- NAME -->
-                <label for="name">Name:</label>
+        <!-- NAME -->
+        <label for="name">Name:</label>
+        <input type="text"
+               id="name"
+               name="name"
+               required>
+        <span class="error-message" id="name-error"></span>
 
-                <input type="text"
-                       id="name"
-                       name="name"
-                       required>
+        <!-- EMAIL -->
+        <label for="email">Email:</label>
+        <input type="email"
+               id="email"
+               name="email"
+               required>
+        <span class="error-message" id="email-error"></span>
 
+        <!-- TOPIC -->
+        <label for="topic">Topic:</label>
+        <select id="topic" name="topic">
+            <option value="web-development">Web Development</option>
+            <option value="programming">Programming</option>
+            <option value="general">General</option>
+        </select>
 
-                <!-- EMAIL -->
-                <label for="email">Email:</label>
+        <!-- MESSAGE -->
+        <label for="message">Message:</label>
+        <textarea id="message"
+                  name="message"
+                  rows="6"
+                  required></textarea>
+        <span class="error-message" id="message-error"></span>
 
-                <input type="email"
-                       id="email"
-                       name="email"
-                       required>
+        <button type="submit">Send Message</button>
 
+    </form>
 
-                <!-- TOPIC -->
-                <label for="topic">Topic:</label>
+    <div id="form-preview" class="form-preview" hidden></div>
 
-                <select id="topic" name="topic">
+    <p>
+        Note: This form is for demonstration purposes only.
+        It does not send or store any information.
+    </p>
 
-                    <option value="web-development">
-                        Web Development
-                    </option>
+</section>
+</main>
 
-                    <option value="programming">
-                        Programming
-                    </option>
+<!-- FOOTER -->
+<footer>
+  <p>
+    <a href="https://github.com/tashagrace07/ICT251-Activity_My_Web" target="_blank" rel="noopener">
+      View Source on GitHub
+    </a>
+  </p>
+  <p>&copy; 2026 Natasha Grace Mulenga — ICT251 Activity 3</p>
+</footer>
 
-                    <option value="general">
-                        General
-                    </option>
-
-                </select>
-
-
-                <!-- MESSAGE -->
-                <label for="message">Message:</label>
-
-                <textarea id="message"
-                          name="message"
-                          rows="6"
-                          required>
-                </textarea>
-
-
-                <!-- SUBMIT -->
-                <button type="submit">
-                    Send Message
-                </button>
-
-            </form>
-
-            <p>
-                Note: This form is for demonstration purposes only.
-                It does not send or store any information.
-            </p>
-
-        </section>
-
-    </main>
-
-
-    <!-- FOOTER -->
-    <footer>
-
-        <p>
-            &copy; 2026 Grace Mulenga. All rights reserved.
-        </p>
-
-    </footer>
-
+<script src="js/script.js" defer></script>
 </body>
-
 </html>
